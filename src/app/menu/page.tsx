@@ -1,18 +1,19 @@
 "use client"
 
 import Image from "next/image"
+import demo from "../assets/demo.jpg"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from 'next/link'
 
 // Mock product data
 const products = [
-  { id: 1, name: "Restaurant 1", price: 19.99, image: "/placeholder.svg?height=200&width=200" },
-  { id: 2, name: "Restaurant 2", price: 49.99, image: "/placeholder.svg?height=200&width=200" },
-  { id: 3, name: "Restaurant 3", price: 199.99, image: "/placeholder.svg?height=200&width=200" },
-  { id: 4, name: "Restaurant 4", price: 79.99, image: "/placeholder.svg?height=200&width=200" },
-  { id: 5, name: "Restaurant 5", price: 29.99, image: "/placeholder.svg?height=200&width=200" },
-  { id: 6, name: "Restaurant 6", price: 149.99, image: "/placeholder.svg?height=200&width=200" },
+  { id: 1, name: "Restaurant 1", price: 19.99, image: {demo} },
+  { id: 2, name: "Restaurant 2", price: 49.99, image:{demo} },
+  { id: 3, name: "Restaurant 3", price: 199.99, image:{demo} },
+  { id: 4, name: "Restaurant 4", price: 79.99, image:{demo} },
+  { id: 5, name: "Restaurant 5", price: 29.99, image:{demo} },
+  { id: 6, name: "Restaurant 6", price: 149.99, image: {demo} },
 ]
 
 export default function ProductPage() {
@@ -25,7 +26,7 @@ export default function ProductPage() {
             <CardHeader>
               <div className="relative w-full h-48">
                 <Image
-                  src={product.image}
+                  src={demo}
                   alt={product.name}
                   layout="fill"
                   objectFit="cover"
